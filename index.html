@@ -3,94 +3,441 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BotMaster - Automação para WhatsApp</title>
+    <title>BotMaster - Automação Inteligente para WhatsApp</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+    <!-- Partículas de fundo -->
+    <div class="particles" id="particles"></div>
 
-    <header>
-        <nav>
-            <div class="logo">BotMaster</div>
+    <!-- Header Moderno -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <span>Bot<span class="highlight">Master</span></span>
+            </div>
             <ul class="nav-links">
-                <li><a href="#produto">O Bot</a></li>
-                <li><a href="#clientes">Clientes</a></li>
-                <li><a href="#sobre">Quem Somos</a></li>
-                <li><a href="#contato" class="btn-nav">Fale Conosco</a></li>
+                <li><a href="#produto"><i class="fas fa-cog"></i> Recursos</a></li>
+                <li><a href="#clientes"><i class="fas fa-users"></i> Clientes</a></li>
+                <li><a href="#sobre"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                <li><a href="#contato" class="btn-nav">
+                    <i class="fas fa-paper-plane"></i> Contato
+                </a></li>
             </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
+    <!-- Hero Section Ultra Moderna -->
     <section id="hero">
         <div class="hero-content">
-            <h1>Atenda seus clientes 24/7 no WhatsApp</h1>
-            <p>Aumente suas vendas com nosso bot de inteligência artificial.</p>
-            <button onclick="scrollToContact()">Quero testar agora</button>
+            <div class="hero-badge">
+                <i class="fas fa-bolt"></i>
+                <span>IA de Última Geração</span>
+            </div>
+            <h1 class="hero-title">
+                Revolucione seu
+                <span class="gradient-text">Atendimento</span>
+                no WhatsApp
+            </h1>
+            <p class="hero-subtitle">
+                Automação inteligente que funciona 24/7, aumenta suas vendas e 
+                encanta seus clientes com respostas instantâneas e personalizadas.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToContact()">
+                    <span>Começar Agora</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <button class="btn-secondary" onclick="playDemo()">
+                    <i class="fas fa-play"></i>
+                    <span>Ver Demonstração</span>
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="10000">0</div>
+                    <div class="stat-label">Mensagens/dia</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="98">0</div>
+                    <div class="stat-label">% Satisfação</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">Clientes Ativos</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
+    <!-- Seção de Recursos -->
     <section id="produto">
-        <h2>Como funciona?</h2>
-        <div class="cards-container">
-            <div class="card">
-                <i class="fa-brands fa-whatsapp"></i>
-                <h3>Conexão Rápida</h3>
-                <p>Conecte via QR Code em segundos.</p>
+        <div class="section-header">
+            <span class="section-label">RECURSOS PODEROSOS</span>
+            <h2>Como Funciona Nossa Magia?</h2>
+            <p>Tecnologia de ponta para transformar seu atendimento</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card" data-aos="fade-up" data-delay="0">
+                <div class="feature-icon">
+                    <i class="fab fa-whatsapp"></i>
+                    <div class="icon-bg"></div>
+                </div>
+                <h3>Conexão Instantânea</h3>
+                <p>Conecte seu WhatsApp via QR Code em menos de 30 segundos. Simples, rápido e seguro.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> Multi-dispositivos</li>
+                    <li><i class="fas fa-check"></i> Conexão criptografada</li>
+                    <li><i class="fas fa-check"></i> Sem limite de mensagens</li>
+                </ul>
             </div>
-            <div class="card">
-                <i class="fa-solid fa-robot"></i>
-                <h3>IA Treinada</h3>
-                <p>Responde dúvidas frequentes automaticamente.</p>
+
+            <div class="feature-card" data-aos="fade-up" data-delay="100">
+                <div class="feature-icon">
+                    <i class="fas fa-brain"></i>
+                    <div class="icon-bg"></div>
+                </div>
+                <h3>Inteligência Artificial</h3>
+                <p>IA treinada especialmente para seu negócio. Aprende e melhora continuamente.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> Processamento de linguagem natural</li>
+                    <li><i class="fas fa-check"></i> Respostas contextuais</li>
+                    <li><i class="fas fa-check"></i> Aprendizado contínuo</li>
+                </ul>
             </div>
-            <div class="card">
-                <i class="fa-solid fa-chart-line"></i>
-                <h3>Dashboard</h3>
-                <p>Acompanhe métricas de atendimento.</p>
+
+            <div class="feature-card" data-aos="fade-up" data-delay="200">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                    <div class="icon-bg"></div>
+                </div>
+                <h3>Analytics Avançado</h3>
+                <p>Dashboard completo com métricas em tempo real e insights acionáveis.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> Relatórios personalizados</li>
+                    <li><i class="fas fa-check"></i> Métricas de conversão</li>
+                    <li><i class="fas fa-check"></i> Análise de sentimento</li>
+                </ul>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-delay="300">
+                <div class="feature-icon">
+                    <i class="fas fa-rocket"></i>
+                    <div class="icon-bg"></div>
+                </div>
+                <h3>Automação Total</h3>
+                <p>Configure fluxos de conversação personalizados e automações complexas.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> Fluxos personalizados</li>
+                    <li><i class="fas fa-check"></i> Gatilhos inteligentes</li>
+                    <li><i class="fas fa-check"></i> Integrações API</li>
+                </ul>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-delay="400">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                    <div class="icon-bg"></div>
+                </div>
+                <h3>Segurança Máxima</h3>
+                <p>Seus dados protegidos com criptografia de ponta a ponta e LGPD compliance.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> Criptografia E2E</li>
+                    <li><i class="fas fa-check"></i> LGPD compliant</li>
+                    <li><i class="fas fa-check"></i> Backup automático</li>
+                </ul>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-delay="500">
+                <div class="feature-icon">
+                    <i class="fas fa-headset"></i>
+                    <div class="icon-bg"></div>
+                </div>
+                <h3>Suporte Premium</h3>
+                <p>Time dedicado pronto para ajudar você a qualquer momento.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> Suporte 24/7</li>
+                    <li><i class="fas fa-check"></i> Onboarding gratuito</li>
+                    <li><i class="fas fa-check"></i> Treinamento incluído</li>
+                </ul>
             </div>
         </div>
     </section>
 
+    <!-- Seção de Clientes -->
     <section id="clientes">
-        <h2>Quem confia na gente</h2>
-        <div class="logos-clientes">
-            <div class="logo-box">Empresa A</div>
-            <div class="logo-box">Empresa B</div>
-            <div class="logo-box">Empresa C</div>
+        <div class="section-header">
+            <span class="section-label">EMPRESAS QUE CONFIAM</span>
+            <h2>Marcas que Escolheram Excelência</h2>
+            <p>Junte-se a centenas de empresas que transformaram seu atendimento</p>
+        </div>
+        
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="https://i.pravatar.cc/100?img=12" alt="Cliente">
+                    <div>
+                        <h4>Carlos Mendes</h4>
+                        <p>CEO - TechShop Brasil</p>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-text">
+                    "Aumentamos nossas vendas em 300% no primeiro mês! O bot responde instantaneamente 
+                    e nossos clientes adoram. Investimento que se paga sozinho."
+                </p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="https://i.pravatar.cc/100?img=45" alt="Cliente">
+                    <div>
+                        <h4>Mariana Costa</h4>
+                        <p>Diretora - Beleza & Estilo</p>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-text">
+                    "Finalmente consigo atender todos os clientes, mesmo fora do horário comercial. 
+                    A IA é surpreendentemente natural e eficiente!"
+                </p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="https://i.pravatar.cc/100?img=33" alt="Cliente">
+                    <div>
+                        <h4>Roberto Alves</h4>
+                        <p>Fundador - FitLife Academy</p>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-text">
+                    "Dashboard incrível! Consigo ver tudo que acontece em tempo real. 
+                    A automação liberou meu time para focar no que realmente importa."
+                </p>
+            </div>
+        </div>
+
+        <div class="logos-marquee">
+            <div class="marquee-content">
+                <div class="client-logo">TechShop</div>
+                <div class="client-logo">StyleHub</div>
+                <div class="client-logo">FastFood+</div>
+                <div class="client-logo">MegaStore</div>
+                <div class="client-logo">BeautyLab</div>
+                <div class="client-logo">FitLife</div>
+                <div class="client-logo">TechShop</div>
+                <div class="client-logo">StyleHub</div>
+                <div class="client-logo">FastFood+</div>
+            </div>
         </div>
     </section>
 
+    <!-- Seção Sobre o Time -->
     <section id="sobre">
-        <h2>Conheça o Time</h2>
-        <div class="team-container">
-            <div class="member">
-                <img src="https://via.placeholder.com/100" alt="Foto Dono">
+        <div class="section-header">
+            <span class="section-label">NOSSO TIME</span>
+            <h2>Conheça Quem Faz Acontecer</h2>
+            <p>Especialistas dedicados a revolucionar seu atendimento</p>
+        </div>
+        
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-image">
+                    <img src="https://i.pravatar.cc/300?img=60" alt="João Silva">
+                    <div class="member-overlay">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
                 <h4>João Silva</h4>
-                <p>Desenvolvedor Lead</p>
+                <p class="role">CTO & Co-fundador</p>
+                <p class="bio">10+ anos em IA e automação. Ex-Google, apaixonado por tecnologia que muda vidas.</p>
             </div>
-            <div class="member">
-                <img src="https://via.placeholder.com/100" alt="Foto Vendedor">
+
+            <div class="team-member">
+                <div class="member-image">
+                    <img src="https://i.pravatar.cc/300?img=47" alt="Maria Souza">
+                    <div class="member-overlay">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
                 <h4>Maria Souza</h4>
-                <p>Especialista em Vendas</p>
+                <p class="role">Head de Vendas</p>
+                <p class="bio">Especialista em crescimento de negócios. Ajudou 500+ empresas a escalarem suas vendas.</p>
+            </div>
+
+            <div class="team-member">
+                <div class="member-image">
+                    <img src="https://i.pravatar.cc/300?img=15" alt="Pedro Santos">
+                    <div class="member-overlay">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <h4>Pedro Santos</h4>
+                <p class="role">Product Designer</p>
+                <p class="bio">Design centrado no usuário. Transformando complexidade em simplicidade desde 2015.</p>
             </div>
         </div>
     </section>
 
+    <!-- Seção de Contato Moderna -->
     <section id="contato">
-        <h2>Entre em Contato</h2>
-        <form id="contactForm">
-            <input type="text" name="nome" placeholder="Seu Nome" required>
-            
-            <input type="tel" name="numero" placeholder="Seu WhatsApp (com DDD)" required>
-            
-            <input type="email" name="email" placeholder="Seu E-mail" required>
-            <textarea name="mensagem" placeholder="Sua Mensagem"></textarea>
-            
-            <button type="submit">Enviar Mensagem</button>
-        </form>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="section-header left-aligned">
+                    <span class="section-label">FALE CONOSCO</span>
+                    <h2>Pronto Para Transformar Seu Negócio?</h2>
+                    <p>Preencha o formulário e nossa equipe entrará em contato em menos de 24h</p>
+                </div>
+                
+                <div class="contact-features">
+                    <div class="contact-feature">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Resposta Rápida</h4>
+                            <p>Retornamos em até 1 hora útil</p>
+                        </div>
+                    </div>
+                    <div class="contact-feature">
+                        <i class="fas fa-gift"></i>
+                        <div>
+                            <h4>Trial Gratuito</h4>
+                            <p>14 dias grátis, sem cartão</p>
+                        </div>
+                    </div>
+                    <div class="contact-feature">
+                        <i class="fas fa-handshake"></i>
+                        <div>
+                            <h4>Consultoria Grátis</h4>
+                            <p>Análise completa do seu negócio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form id="contactForm" class="modern-form">
+                <div class="form-group">
+                    <label for="nome">
+                        <i class="fas fa-user"></i>
+                        Nome Completo
+                    </label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fas fa-envelope"></i>
+                            E-mail
+                        </label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numero">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp
+                        </label>
+                        <input type="tel" id="numero" name="numero" placeholder="(11) 99999-9999" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">
+                        <i class="fas fa-comment"></i>
+                        Mensagem
+                    </label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte-nos sobre seu negócio e como podemos ajudar..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <span>Enviar Mensagem</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 BotMaster. Todos os direitos reservados.</p>
+    <!-- Footer Moderno -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">
+                    <i class="fas fa-robot"></i>
+                    <span>Bot<span class="highlight">Master</span></span>
+                </div>
+                <p>Revolucionando o atendimento no WhatsApp com inteligência artificial de ponta.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#produto">Recursos</a></li>
+                    <li><a href="#clientes">Clientes</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Suporte</h4>
+                <ul>
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">Documentação</a></li>
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">Status</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <ul class="contact-list">
+                    <li><i class="fas fa-envelope"></i> contato@botmaster.com</li>
+                    <li><i class="fas fa-phone"></i> (11) 99999-9999</li>
+                    <li><i class="fas fa-map-marker-alt"></i> São Paulo, Brasil</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 BotMaster. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="#">Privacidade</a>
+                <a href="#">Termos de Uso</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
