@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BotMaster - Automação para WhatsApp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">BotMaster</div>
+            <ul class="nav-links">
+                <li><a href="#produto">O Bot</a></li>
+                <li><a href="#clientes">Clientes</a></li>
+                <li><a href="#sobre">Quem Somos</a></li>
+                <li><a href="#contato" class="btn-nav">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Atenda seus clientes 24/7 no WhatsApp</h1>
+            <p>Aumente suas vendas com nosso bot de inteligência artificial.</p>
+            <button onclick="scrollToContact()">Quero testar agora</button>
+        </div>
+    </section>
+
+    <section id="produto">
+        <h2>Como funciona?</h2>
+        <div class="cards-container">
+            <div class="card">
+                <i class="fa-brands fa-whatsapp"></i>
+                <h3>Conexão Rápida</h3>
+                <p>Conecte via QR Code em segundos.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-robot"></i>
+                <h3>IA Treinada</h3>
+                <p>Responde dúvidas frequentes automaticamente.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Dashboard</h3>
+                <p>Acompanhe métricas de atendimento.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="clientes">
+        <h2>Quem confia na gente</h2>
+        <div class="logos-clientes">
+            <div class="logo-box">Empresa A</div>
+            <div class="logo-box">Empresa B</div>
+            <div class="logo-box">Empresa C</div>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <h2>Conheça o Time</h2>
+        <div class="team-container">
+            <div class="member">
+                <img src="https://via.placeholder.com/100" alt="Foto Dono">
+                <h4>João Silva</h4>
+                <p>Desenvolvedor Lead</p>
+            </div>
+            <div class="member">
+                <img src="https://via.placeholder.com/100" alt="Foto Vendedor">
+                <h4>Maria Souza</h4>
+                <p>Especialista em Vendas</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <form id="contactForm">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
+            
+            <input type="tel" name="numero" placeholder="Seu WhatsApp (com DDD)" required>
+            
+            <input type="email" name="email" placeholder="Seu E-mail" required>
+            <textarea name="mensagem" placeholder="Sua Mensagem"></textarea>
+            
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 BotMaster. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

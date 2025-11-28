@@ -1,0 +1,131 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+:root {
+    --primary-color: #25D366; /* Verde WhatsApp */
+    --dark-bg: #121212;
+    --light-text: #f5f5f5;
+    --card-bg: #1e1e1e;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+}
+
+/* Header & Nav com Flexbox */
+header {
+    background: rgba(0,0,0,0.8);
+    padding: 20px;
+    position: fixed; /* Menu fixo no topo */
+    width: 100%;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-nav {
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: black !important;
+}
+
+/* Sections Gerais */
+section {
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero */
+#hero {
+    height: 100vh; /* Altura total da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1555421689-d68471e189f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+#hero h1 { font-size: 3rem; margin-bottom: 20px; }
+#hero button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+#hero button:hover { transform: scale(1.05); }
+
+/* Cards do Produto (Flexbox) */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap; /* Para quebrar linha no celular */
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    transition: 0.3s;
+}
+
+.card:hover { transform: translateY(-10px); border-bottom: 3px solid var(--primary-color); }
+.card i { font-size: 40px; color: var(--primary-color); margin-bottom: 15px; }
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+form button {
+    padding: 15px;
+    background-color: var(--primary-color);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
